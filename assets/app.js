@@ -9,13 +9,13 @@ value and create a button with that value.
 That button value will also be added to a data-value property of the button
 
 */
-var animalSearched = ["goats"];
+var animalSearched = ["goats", "fish", "cat"];
 
 function renderButtons() {
   $(".buttonSpace").empty();
   for (var i = 0; i < animalSearched.length; i++) {
     var newAnimal = $("<button>");
-    newAnimal.addClass("animalButton");
+    newAnimal.addClass("animalButton btn btn-danger");
     newAnimal.attr("data-animal", animalSearched[i]);
     newAnimal.text(animalSearched[i]);
 
@@ -53,7 +53,7 @@ $(document).on("click", ".animalButton", function() {
     $("#gifSpace").empty();
     for (var i = 0; i < results.length; i++) {
       //
-      var animalDiv = $("<div>");
+      var animalDiv = $("<span>");
       var p = $("<p>").text("Rating: " + results[i].rating);
       var animalImage = $("<img>");
       animalImage.attr("src", results[i].images.fixed_height_still.url);

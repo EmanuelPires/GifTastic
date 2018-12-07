@@ -1,0 +1,27 @@
+button {
+  display: inline-block;
+
+  margin: 10px;
+}
+
+body {
+  background-color: aqua;
+}
+
+span {
+  display: inline-block;
+  margin: 8px 13px 8px 13px;
+}
+p {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  vertical-align: 0;
+}
+
+.rightSide {
+  margin-left: 21px;
+}
+
+#animalSubmitted {
+  margin-top: 5px;
+}
