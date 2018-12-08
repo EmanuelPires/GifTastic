@@ -15,7 +15,7 @@ function renderButtons() {
   $(".buttonSpace").empty();
   for (var i = 0; i < animalSearched.length; i++) {
     var newAnimal = $("<button>");
-    newAnimal.addClass("animalButton btn btn-danger");
+    newAnimal.addClass("animalButton btn btn-light");
     newAnimal.attr("data-animal", animalSearched[i]);
     newAnimal.text(animalSearched[i]);
 
@@ -52,15 +52,24 @@ $(document).on("click", ".animalButton", function() {
 
     $("#gifSpace").empty();
     for (var i = 0; i < results.length; i++) {
-      //
       var animalDiv = $("<span>");
-      var p = $("<p>").text("Rating: " + results[i].rating);
+      var p = $("<p>").text("RATED: " + results[i].content_url);
+      //I was unable to make a download link
+      // var dLoad = $("<a>")
+      //   .text("DOWNLOAD")
+      //   .attr("href", results[i].images.original.url)
+      //   .attr("download", "Test");
+
+      console.dLoad;
+
       var animalImage = $("<img>");
       animalImage.attr("src", results[i].images.fixed_height_still.url);
       animalImage.attr("data-state", "still");
       animalImage.attr("data-id", results[i].id);
       animalDiv.append(p);
+      // animalDiv.append(dLoad);
       animalDiv.append(animalImage);
+
       $("#gifSpace").append(animalDiv);
     }
   });
