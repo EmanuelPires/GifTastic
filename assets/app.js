@@ -53,7 +53,7 @@ $(document).on("click", ".animalButton", function() {
     $("#gifSpace").empty();
     for (var i = 0; i < results.length; i++) {
       var animalDiv = $("<span>");
-      var p = $("<p>").text("RATED: " + results[i].content_url);
+      var p = $("<p>").text("RATED: " + results[i].rating);
       //I was unable to make a download link
       // var dLoad = $("<a>")
       //   .text("DOWNLOAD")
