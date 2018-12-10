@@ -84,7 +84,7 @@ $(document).on("click", "img", function() {
     var id = $(this).attr("data-id");
 
     var queryURL =
-      "http://api.giphy.com/v1/gifs/" +
+      "https://api.giphy.com/v1/gifs/" +
       id +
       "?&api_key=qblmO0dj7fRyzxgTFKW8jP8rV14dGMC8";
     var image = $(this);
@@ -104,7 +104,7 @@ $(document).on("click", "img", function() {
     var id = $(this).attr("data-id");
 
     var queryURL =
-      "http://api.giphy.com/v1/gifs/" +
+      "https://api.giphy.com/v1/gifs/" +
       id +
       "?&api_key=qblmO0dj7fRyzxgTFKW8jP8rV14dGMC8";
     var image = $(this);
